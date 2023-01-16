@@ -1,0 +1,105 @@
+@import '/styles/main.module.scss';
+
+.position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+    cursor: pointer;
+}
+
+.border {
+    background-color: $colorBg;
+    border-radius: 20px;
+    padding: 1rem 5rem;
+    width: 30%;
+    overflow: hidden;
+}
+
+.icon_border_position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_border_income {
+    background-color: $colorBgIconGreen;
+    border-radius: 10px;
+    padding: 0.9rem;
+    display: inline-block;
+}
+
+.icon_border_income:hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+}
+
+.icon_income {
+    color: $colorIconGreen;
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.icon_border_spend {
+    background-color: $colorBgIconPink;
+    border-radius: 10px;
+    padding: 0.9rem;
+    display: inline-block;
+}
+
+.icon_border_spend:hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+}
+
+.icon_spend {
+    color: $colorIconPink;
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.icon_border_savings {
+    background-color: $colorBgIconBlue;
+    border-radius: 10px;
+    padding: 0.9rem;
+    display: inline-block;
+}
+
+.icon_border_savings:hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+}
+
+.icon_savings {
+    color: $colorIconBlue;
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.title {
+    font-weight: $fontWeightSemiBold;
+    padding: 1rem 0 1.5rem 0;
+    text-align: center;
+}
+
+.value {
+    font-weight: $fontWeightBold;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.value:hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+}
