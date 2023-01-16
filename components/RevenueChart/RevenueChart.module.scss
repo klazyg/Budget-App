@@ -1,0 +1,33 @@
+@import '/styles/main.module.scss';
+
+.border {
+    border-radius: 20px;
+    background-color: $colorBg;
+    padding: 2rem;
+    height: 40%;
+}
+
+.title {
+    font-weight: $fontWeightBold;
+    font-size: 1.3rem;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+    margin: 0 1.5rem;
+}
+
+.viewMore {
+    font-weight: $fontWeightSemiBold;
+    color: $colorFontPurple;
+    cursor: pointer;
+}
+
+.viewMore:hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+  }
+
+// @include gradient(to right, $colorChartGradient);
