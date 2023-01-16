@@ -1,0 +1,122 @@
+@import '/styles/main.module.scss';
+
+
+.position {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.border {
+    border-radius: 20px;
+    background-color: $colorBg;
+    padding: 2rem 0;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+    margin: 0 1.5rem;
+}
+
+.title {
+    font-weight: $fontWeightBold;
+    font-size: 1.3rem;
+}
+
+.viewMore {
+    font-weight: $fontWeightSemiBold;
+    color: $colorFontPurple;
+    cursor: pointer;
+}
+
+.viewMore:hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+}
+
+.date {
+    color: $colorFontGrey;
+    font-weight: $fontWeightMedium;
+    font-size: 0.8rem;
+    margin: 0 1.5rem;
+    padding: 0.6rem 0 1rem 0;
+}
+
+.transaction {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 1.3rem;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+.transaction:hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+    color: $colorFontPurple;
+}
+
+.icon_border {
+    border: 0.2rem solid $colorFontPurple;
+    border-radius: 10px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.dsp {
+    line-height: 1.5rem;
+}
+
+.payment {
+    font-weight: $fontWeightSemiBold;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 1rem;
+}
+
+.category {
+    color: $colorFontGrey;
+    font-weight: $fontWeightMedium;
+    font-size: 0.9rem;
+}
+
+.calendar {
+    color: $colorFontGrey;
+    font-weight: $fontWeightMedium;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.amount {
+    font-weight: $fontWeightSemiBold;
+    color: red;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.amount-income {
+    color: green;
+}
+
+.amount-spend {
+    color: red;
+}
