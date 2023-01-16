@@ -1,0 +1,114 @@
+@import '/styles/main.module.scss';
+
+.position {
+    padding: 2rem 0;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.border {
+    border-radius: 20px;
+    background-color: $colorBg;
+    padding: 2rem 0;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    margin: 0 1.5rem;
+}
+
+.title {
+    font-weight: $fontWeightBold;
+    font-size: 1.3rem;
+}
+
+.viewMore {
+    font-weight: $fontWeightSemiBold;
+    color: $colorFontPurple;
+    cursor: pointer;
+}
+
+.viewMore:hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+}
+
+.container {
+    margin: 0 1.5rem;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.categoryContainer {
+    border: 0.2rem solid $colorFontPurple;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 1rem 0;
+    font-weight: $fontWeightSemiBold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.categoryContainer:hover {
+    transition: transform 0.3s;
+    transform: scale(1.1);
+}
+
+.food:hover {
+    border-color: $colorIconPurple;
+    color: $colorIconPurple;
+}
+
+.transport:hover {
+    border-color: $colorIconRed;
+    color: $colorIconRed;
+}
+
+.clothes:hover {
+    border-color: $colorIconPink;
+    color: $colorIconPink;
+}
+
+.health:hover {
+    border-color: $colorIconGreen;
+    color: $colorIconGreen;
+}
+
+.restaurant:hover {
+    border-color: $colorIconYellow;
+    color: $colorIconYellow;
+}
+
+.fees:hover {
+    border-color: $colorIconBlue;
+    color: $colorIconBlue;
+}
+
+.otherExpense:hover {
+    border-color: $colorIconMenu;
+    color: $colorIconMenu;
+}
+
+.box {
+    display: inline-block;
+}
+
+.category {
+    font-weight: $fontWeightSemiBold;
+    text-align: center;
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+}
