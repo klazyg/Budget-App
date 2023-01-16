@@ -1,0 +1,12 @@
+@import '/styles/main.module.scss';
+
+.section {
+    padding: 2rem 0 0.5rem 0;
+    margin-left: 2rem;
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: $fontWeightBold;
+    cursor: pointer;
+}
