@@ -1,0 +1,45 @@
+//FONTS COLORS
+$colorFontBlack: #000000;
+$colorFontGrey: #9A9BA6;
+$colorFontPurple: #524AAD;
+$colorFontIncome: #5CDB7C;
+$colorFontCosts: #D92531;
+
+
+//BACKGROUNDS COLORS
+$colorBg: #fff;
+$colorBgSecondary: #F3F2F7;
+$colorBgPurple: #6B69C9;
+$colorBgDarkPurple: #524AAD;
+
+
+//ICON BACKGROUNDS
+$colorBgIconGreen: #E9F2F1;
+$colorBgIconPink: #F7E9F5;
+$colorBgIconBlue: #E7F1F5;
+$colorBgIconYellow: #F7F0E6;
+$colorBgIconPurple: #E4E3F5;
+$colorBgIconRed: #FFE9EB;
+
+
+//ICONS COLORS
+$colorIconMenu: #B0B4BF;
+$colorIconGreen: #4DC2BB;
+$colorIconPink: #C06EF7;
+$colorIconBlue: #6AAECC;
+$colorIconYellow: #F0990A;
+$colorIconPurple: #645FCF;
+$colorIconRed: #C41A1E;
+
+
+//CHARTS COLORS & GRADIENT
+$colorChartPurple: #4E46ED;
+$colorChartBlue: #145AF7;
+$colorChartPink: #F771BF;
+$colorChartYellow: #F7C102;
+$colorChartGreen: #4DC483;
+$colorChartGradient: #FDFDFF, #E0DFFE;
+
+@mixin gradient($direction, $gradient) { 
+    background: -webkit-linear-gradient($direction, $gradient);
+}
