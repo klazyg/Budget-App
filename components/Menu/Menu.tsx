@@ -1,6 +1,7 @@
 import React from "react";
 import Link from 'next/link';
 import { FaHome, FaFileInvoice, FaChartArea, FaMoneyCheckAlt } from 'react-icons/fa';
+import { MdSavings } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
 import { IconContext } from 'react-icons';
 import styles from "./Menu.module.scss";
@@ -44,12 +45,12 @@ const Menu: React.FC = () => {
             </Link>
           </li>
           <li className={styles.item}>
-            <Link href="/charts">
-              <FaChartArea
+            <Link href="/savings">
+              <MdSavings
                 className={styles.icon}
               />
               <div className={styles.text}>
-                Charts
+                Savings
               </div>
             </Link>
           </li>
@@ -60,6 +61,16 @@ const Menu: React.FC = () => {
               />
               <div className={styles.text}>
                 Transactions
+              </div>
+            </Link>
+          </li>
+          <li className={styles.item}>
+            <Link href="/charts">
+              <FaChartArea
+                className={styles.icon}
+              />
+              <div className={styles.text}>
+                Charts
               </div>
             </Link>
           </li>
