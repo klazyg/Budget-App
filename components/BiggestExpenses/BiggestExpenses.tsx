@@ -30,7 +30,7 @@ const BiggestExpenses: React.FC<Props> = ({ sortedTransactions }) => {
           <div className={`${styles.box} ${styles.categoryContainer} ${styles[transaction.category]}`} key={index}>
             <Icon className={styles.icon} />
             <span className={styles.category}> {transaction.category}</span>
-            <span> ${transaction.total}</span>
+            <span className={styles.total}> -${transaction.total}</span>
           </div>
         </div>
       );
@@ -49,7 +49,7 @@ const BiggestExpenses: React.FC<Props> = ({ sortedTransactions }) => {
                 </div>
               </Link>
             </div>
-            <div className={styles.position}>
+            <div className={styles.position_expenses}>
               {biggestExpenses}
             </div>
           </div>
