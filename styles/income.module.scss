@@ -1,0 +1,40 @@
+@import '/styles/main.module.scss';
+
+.position {
+    padding: 2rem 0;
+}
+
+.border {
+    border-radius: 20px;
+    background-color: $colorBg;
+    padding: 2rem 0;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    margin: 0 1.5rem;
+}
+
+.title {
+    font-weight: $fontWeightBold;
+    font-size: 1.3rem;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+}
+
+.what {
+    width: 50%;
+}
+
+.amount {
+    width: 20%;
+}
+
+.when {
+    width: 30%;
+}
