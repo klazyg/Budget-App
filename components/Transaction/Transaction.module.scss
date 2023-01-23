@@ -48,7 +48,7 @@
 
 .transaction {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
     padding-bottom: 1.3rem;
     margin: 0 2rem;
     cursor: pointer;
@@ -84,12 +84,14 @@
     display: flex;
     flex-wrap: wrap;
     padding-right: 1rem;
+    text-transform: capitalize;
 }
 
 .category {
     color: $colorFontGrey;
     font-weight: $fontWeightMedium;
     font-size: 0.9rem;
+    text-transform: capitalize;
 }
 
 .calendar {
@@ -119,4 +121,74 @@
 
 .amount-spend {
     color: red;
+}
+
+.food {
+    border-color: $colorIconOrange;
+    color: $colorIconOrange;
+}
+
+.food:hover {
+    border-color: $colorIconOrange;
+    color: $colorIconOrange;
+}
+
+.transport {
+    border-color: $colorIconRed;
+    color: $colorIconRed;
+}
+
+.transport:hover {
+    border-color: $colorIconRed;
+    color: $colorIconRed;
+}
+
+.clothes {
+    border-color: $colorIconPink;
+    color: $colorIconPink;
+}
+
+.clothes:hover {
+    border-color: $colorIconPink;
+    color: $colorIconPink;
+}
+
+.health {
+    border-color: $colorIconGreen;
+    color: $colorIconGreen;
+}
+
+.health:hover {
+    border-color: $colorIconGreen;
+    color: $colorIconGreen;
+}
+
+.restaurant {
+    border-color: $colorIconYellow;
+    color: $colorIconYellow;
+}
+
+.restaurant:hover {
+    border-color: $colorIconYellow;
+    color: $colorIconYellow;
+}
+
+.fees {
+    border-color: $colorIconBlue;
+    color: $colorIconBlue;
+}
+
+.fees:hover {
+    border-color: $colorIconBlue;
+    color: $colorIconBlue;
+}
+
+.otherExpense {
+    border-color: $colorIconMenu;
+    color: $colorIconMenu;
+}
+
+.otherExpense:hover {
+    border-color: $colorIconMenu;
+    color: $colorIconMenu;
 }
