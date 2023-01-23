@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import TotalCosts from "../components/TotalCosts/TotalCosts";
 import Transaction from "../components/Transaction/Transaction";
-import Input from "../components/Input/Input";
+import Form from "../components/Form/Form";
 import Spending from '../components/Spending/Spending';
 import BiggestExpenses from '../components/BiggestExpenses/BiggestExpenses';
 import styles from '../styles/Home.module.scss'
 import RevenueChart from '../components/RevenueChart/RevenueChart';
 import '/styles/main.module.scss';
+import axios from 'axios';
 
-const Home: React.FC = () => {
-  const [transactions, setTransactions] = useState([]);
+const Home: React.FC = ({ transactionsData }) => {
+  const [transactions, setTransactions] = useState(transactionsData);
 
   const onSubmitTransaction = (transaction) => {
     setTransactions((prevTransactions) => [...prevTransactions, transaction]);
@@ -57,26 +58,26 @@ const Home: React.FC = () => {
         />
         <RevenueChart />
         <div className={styles.gridItem}>
-          {transactions.map((transaction) => (
-            <Transaction
-              key={transaction.when}
-              what={transaction.what}
-              type={transaction.type}
-              amount={transaction.amount}
-              when={transaction.when}
-              category={transaction.category}
-            />
-          ))}
+          <Transaction transactions={transactions} />
           <BiggestExpenses
             sortedTransactions={sortedCategoryTotals} />
         </div>
       </div>
       <div className={styles.rightWidth}>
         {/* <Spending /> */}
-        <Input onSubmitTransaction={onSubmitTransaction} />
+        <Form onSubmitTransaction={onSubmitTransaction} />
       </div>
     </div>
   );
 };
+
+export async function getServerSideProps() {
+  const apiResponse = await axios.get("http:localhost:3000/api/transactions");
+  return {
+    props: {
+      transactionsData: apiResponse.data.transactions,
+    },
+  };
+}
 
 export default Home;
