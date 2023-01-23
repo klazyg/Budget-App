@@ -2,10 +2,9 @@
 
 .position {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
     padding: 2rem 0;
     cursor: pointer;
 }
