@@ -1,4 +1,4 @@
-import React, { PureComponent, useState } from 'react';
+import React, { useState } from 'react';
 import styles from "./RevenueChart.module.scss";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -78,28 +78,53 @@ const data = [
 ];
 
 
-export default class RevenueChart extends PureComponent {
-  render() {
-    return (
-      <div className={styles.border}>
-        <div className={styles.text}>
-          <div className={styles.title}>
-            {new Date().getFullYear()} Revenue Chart
-          </div>
-          <div className={styles.viewMore}>
-            view more
-          </div>
-        </div>
-        <ResponsiveContainer width="100%" height="80%" className={styles.chart}>
-          <LineChart data={data}>
-            <CartesianGrid strokeDasharray="1 8" />
-            <XAxis dataKey="month" />
-            <YAxis />
-            <Tooltip formatter={value => '$' + value} />
-            <Line type="monotone" dataKey="Income" stroke="#524AAD" dot={{ strokeWidth: 3, r: 3.5 }} strokeWidth={2.5} />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
-    );
+const RevenueChart: React.FC = () => {
+  const [chartData, setChartData] = useState(data);
+
+  const addToChart = (data) => {
+    setChartData([...chartData, data]);
   }
-}
+
+  const handleChange = (month, income) => {
+    setChartData((prevState) => {
+      return prevState.map((item) => {
+        if (item.month === month) {
+          return {
+            ...item,
+            Income: income,
+          };
+        } else {
+          return item;
+        }
+      });
+    });
+  }
+  return (
+    <div className={styles.border}>
+      <div className={styles.text}>
+        <div className={styles.title}>
+          {new Date().getFullYear()} Revenue Chart
+        </div>
+        <div className={styles.viewMore} onClick={() => addToChart({
+          month: 'Dec',
+          uv: 34,
+          Income: 1000,
+          amt: 21,
+        },)}>
+          view more
+        </div>
+      </div>
+      <ResponsiveContainer width="100%" height="80%" className={styles.chart}>
+        <LineChart data={chartData}>
+          <CartesianGrid strokeDasharray="1 8" />
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip formatter={value => '$' + value} />
+          <Line type="monotone" dataKey="Income" stroke="#524AAD" dot={{ strokeWidth: 3, r: 3.5 }} strokeWidth={2.5} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
+export default RevenueChart;
