@@ -65,17 +65,17 @@ const Form: React.FC<Props> = ({ onSubmitTransaction }) => {
   const onSubmitTransactions = (transaction: Transaction) => {
     if (transaction.type === 'income') {
       setIncomeTransactions((prevTransactions) => [
-        ...prevTransactions, 
+        ...prevTransactions,
         transaction,
       ]);
     } else if (transaction.type === 'spend') {
       setSpendTransactions((prevTransactions) => [
-        ...prevTransactions, 
+        ...prevTransactions,
         transaction,
       ]);
     } else if (transaction.type === 'savings') {
       setSavingsTransactions((prevTransactions) => [
-        ...prevTransactions, 
+        ...prevTransactions,
         transaction
       ]);
     }
@@ -131,7 +131,7 @@ const Form: React.FC<Props> = ({ onSubmitTransaction }) => {
             <option value="transport">Transport</option>
             <option value="fees">Fees</option>
             <option value="clothes">Clothes</option>
-            <option value="otherExpenses">Other Expenses</option>
+            <option value="other">Other</option>
           </select>
           <div className={styles.btn_position}>
             <button className={styles.btn} type="submit" value="Button">Add</button>
