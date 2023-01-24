@@ -64,16 +64,6 @@ const Menu: React.FC = () => {
               </div>
             </Link>
           </li>
-          <li className={styles.item}>
-            <Link href="/charts">
-              <FaChartArea
-                className={styles.icon}
-              />
-              <div className={styles.text}>
-                Charts
-              </div>
-            </Link>
-          </li>
         </ul>
       </nav>
     </IconContext.Provider >
