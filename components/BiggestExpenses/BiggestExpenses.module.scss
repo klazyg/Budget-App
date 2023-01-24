@@ -1,12 +1,5 @@
 @import '/styles/main.module.scss';
-
-.position {
-    padding: 2rem 0;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
+@import '/styles/componentStyles.module.scss';
 
 .border {
     border-radius: 20px;
@@ -19,22 +12,6 @@
     margin: 0 1.5rem;
     display: flex;
     justify-content: space-between;
-}
-
-.title {
-    font-size: $fontSizeXLarge;
-    font-weight: $fontWeightBold;
-}
-
-.viewMore {
-    color: $colorPurple;
-    font-weight: $fontWeightSemiBold;
-    cursor: pointer;
-}
-
-.viewMore:hover {
-    transition: transform 0.2s;
-    transform: scale(1.1);
 }
 
 .container {
