@@ -2,15 +2,15 @@
 @import '/styles/componentStyles.module.scss';
 
 .border {
-    border-radius: 20px;
-    background-color: $colorBg;
     padding: 2rem;
     height: 40%;
+    border-radius: 20px;
+    background-color: $colorBg;
 }
 
 .text {
-    display: flex;
-    justify-content: space-between;
     padding-bottom: 4rem;
     margin: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
 }

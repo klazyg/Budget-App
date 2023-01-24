@@ -2,25 +2,26 @@
 @import '/styles/componentStyles.module.scss';
 
 .border {
-    border-radius: 20px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     background-color: $colorBg;
-    padding: 2rem 0 1rem 0;
+    border-radius: 20px;
 }
 
 .text {
-    padding-bottom: 1.2rem;
+    padding-bottom: 2rem;
     margin: 0 1.5rem;
     display: flex;
     justify-content: space-between;
 }
 
-.container {
-    margin: 0 2rem;
+.item {
     padding-bottom: 1.5rem;
+    margin: 0 2rem;
     display: inline-block;
 }
 
-.position_expenses {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,27 +29,27 @@
 }
 
 .box {
-    text-align: center;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .categoryContainer {
+    padding: 1rem 0;
     border: 0.2rem solid $colorPurple;
     border-radius: 12px;
     width: 8rem;
     height: 8rem;
-    padding: 1rem 0;
     font-weight: $fontWeightSemiBold;
     text-align: center;
     cursor: pointer;
 }
 
 .icon {
+    padding-bottom: 1rem;
+    margin: 0 auto;
     width: 3.5rem;
     height: 3.5rem;
-    margin: 0 auto;
-    padding-bottom: 1rem;
 }
 
 .total {
@@ -61,52 +62,52 @@
 }
 
 .category {
-    font-weight: $fontWeightSemiBold;
+    padding-bottom: 1rem;
     font-size: $fontSizeLarge;
+    font-weight: $fontWeightSemiBold;
     text-align: center;
     text-transform: capitalize;
-    padding-bottom: 1rem;
 }
 
 .food {
-    border-color: $colorIconOrange;
     color: $colorIconOrange;
+    border-color: $colorIconOrange;
 }
 
 .transport {
-    border-color: $colorIconRed;
     color: $colorIconRed;
+    border-color: $colorIconRed;
 }
 
 .clothes {
-    border-color: $colorIconPink;
     color: $colorIconPink;
+    border-color: $colorIconPink;
 }
 
 .health {
-    border-color: $colorIconGreen;
     color: $colorIconGreen;
+    border-color: $colorIconGreen;
 }
 
 .restaurant {
-    border-color: $colorIconYellow;
     color: $colorIconYellow;
+    border-color: $colorIconYellow;
 }
 
 .fees {
-    border-color: $colorIconBlue;
     color: $colorIconBlue;
+    border-color: $colorIconBlue;
 }
 
 .other {
-    border-color: $colorIconBrown;
     color: $colorIconBrown;
+    border-color: $colorIconBrown;
 }
 
 .display {
-    margin: 0 2rem;
-    font-weight: $fontWeightMedium;
     padding-top: 2rem;
-    text-align: center;
+    margin: 0 2rem;
     color: $colorFontRed;
+    font-weight: $fontWeightMedium;
+    text-align: center;
 }

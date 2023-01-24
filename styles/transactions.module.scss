@@ -5,21 +5,21 @@
 }
 
 .border {
+    padding: 2rem 0;
     border-radius: 20px;
     background-color: $colorBg;
-    padding: 2rem 0;
 }
 
 .text {
-    display: flex;
-    justify-content: space-between;
     padding-bottom: 2rem;
     margin: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .title {
-    font-weight: $fontWeightBold;
     font-size: $fontSizeXLarge;
+    font-weight: $fontWeightBold;
 }
 
 .table {
@@ -44,13 +44,12 @@
 }
 
 .display {
-    text-align: center;
     padding-top: 2rem;
-    font-weight: $fontWeightBold;
-    font-size: $fontSizeXXLarge;
+    text-align: center;
     color: $colorFontRed;
+    font-size: $fontSizeXXLarge;
+    font-weight: $fontWeightBold;
 }
-
 
 .tr {
     text-transform: capitalize;

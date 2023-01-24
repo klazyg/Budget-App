@@ -1,26 +1,26 @@
 @import '/styles/main.module.scss';
 
 .menu {
+    position: fixed;
+    overflow-y: hidden;
     width: 15%;
     height: 100vh;
     color: $colorFontGrey;
     background-color: $colorBg;
-    position: fixed;
-    overflow-y: hidden;
 }
 
 .profile {
-    display: flex;
-    justify-content: center;
     padding: 2rem;
     gap: 2rem;
+    display: flex;
+    justify-content: center;
     cursor: pointer;
 }
 
 .avatar {
     width: 50px;
     height: 50px;
-    color: $colorPurple;   
+    color: $colorPurple;
 }
 
 .avatar:hover {
@@ -29,17 +29,17 @@
   }
 
 .user {
+    color: $colorFontBlack;
+    gap: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $colorFontBlack;
-    gap: 0.5rem;
 }
 
 .name {
-    font-weight: $fontWeightBold;
-    font-size: $fontSizeLarge;
     color: $colorPurple;
+    font-size: $fontSizeLarge;
+    font-weight: $fontWeightBold;
 }
 
 .name:hover {
@@ -48,34 +48,34 @@
   }
 
 .account {
-    font-weight: $fontWeightMedium;
     font-size: $fontSizeXSmall;
+    font-weight: $fontWeightMedium;
 }
 
 .list {
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
-    padding-left: 1rem;
     cursor: pointer;
 }
 
 .item:hover {
+    border-left: 0.5rem solid $colorPurple;
     background-color: $colorBgSecondary;
     color: $colorPurple;
-    border-left: 0.5rem solid $colorPurple;
     transition: 0.3s;
 }
 
 .icon {
-    display: inline-block;
-    vertical-align: middle;
     margin-left: 3rem;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .text {
-    font-weight: $fontWeightSemiBold;
-    line-height: $lineHeightDefault * 4;
     padding-left: 1.5rem;
-    display: inline-block;
+    line-height: $lineHeightDefault * 4;
+    font-weight: $fontWeightSemiBold;
     vertical-align: middle;
+    display: inline-block;
 }

@@ -2,31 +2,31 @@
 @import '/styles/componentStyles.module.scss';
 
 .border {
+    padding: 2rem 0 1rem 0;
     border-radius: 20px;
     background-color: $colorBg;
-    padding: 2rem 0 1rem 0;
 }
 
 .text {
-    display: flex;
-    justify-content: space-between;
     padding-bottom: 1.2rem;
     margin: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .date {
-    color: $colorFontGrey;
-    font-weight: $fontWeightMedium;
-    font-size: $fontSizeXSmall;
-    margin: 0 1.5rem;
     padding: 0.6rem 0 1rem 0;
+    margin: 0 1.5rem;
+    color: $colorFontGrey;
+    font-size: $fontSizeXSmall;
+    font-weight: $fontWeightMedium;
 }
 
 .transaction {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-bottom: 1.3rem;
     margin: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     cursor: pointer;
 }
 
@@ -56,39 +56,39 @@
 }
 
 .payment {
+    padding-right: 1rem;
     font-weight: $fontWeightSemiBold;
+    text-transform: capitalize;
     display: flex;
     flex-wrap: wrap;
-    padding-right: 1rem;
-    text-transform: capitalize;
 }
 
 .category {
     color: $colorFontGrey;
-    font-weight: $fontWeightMedium;
     font-size: $fontSizeXSmall;
+    font-weight: $fontWeightMedium;
     text-transform: capitalize;
 }
 
 .calendar {
+    padding: 0 1rem;
     color: $colorFontGrey;
-    font-weight: $fontWeightMedium;
     font-size: $fontSizeXSmall;
+    font-weight: $fontWeightMedium;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 1rem;
 }
 
 .amount {
-    font-weight: $fontWeightSemiBold;
+    padding-left: 1rem;
     color: $colorFontRed;
     font-size: $fontSizeLarge;
+    font-weight: $fontWeightSemiBold;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 1rem;
 }
 
 .amount-income {
@@ -100,79 +100,79 @@
 }
 
 .food {
-    border-color: $colorIconOrange;
     color: $colorIconOrange;
+    border-color: $colorIconOrange;
 }
 
 .food:hover {
-    border-color: $colorIconOrange;
     color: $colorIconOrange;
+    border-color: $colorIconOrange;
 }
 
 .transport {
-    border-color: $colorIconRed;
     color: $colorIconRed;
+    border-color: $colorIconRed;
 }
 
 .transport:hover {
-    border-color: $colorIconRed;
     color: $colorIconRed;
+    border-color: $colorIconRed;
 }
 
 .clothes {
-    border-color: $colorIconPink;
     color: $colorIconPink;
+    border-color: $colorIconPink;
 }
 
 .clothes:hover {
-    border-color: $colorIconPink;
     color: $colorIconPink;
+    border-color: $colorIconPink;
 }
 
 .health {
-    border-color: $colorIconGreen;
     color: $colorIconGreen;
+    border-color: $colorIconGreen;
 }
 
 .health:hover {
-    border-color: $colorIconGreen;
     color: $colorIconGreen;
+    border-color: $colorIconGreen;
 }
 
 .restaurant {
-    border-color: $colorIconYellow;
     color: $colorIconYellow;
+    border-color: $colorIconYellow;
 }
 
 .restaurant:hover {
-    border-color: $colorIconYellow;
     color: $colorIconYellow;
+    border-color: $colorIconYellow;
 }
 
 .fees {
-    border-color: $colorIconBlue;
     color: $colorIconBlue;
+    border-color: $colorIconBlue;
 }
 
 .fees:hover {
-    border-color: $colorIconBlue;
     color: $colorIconBlue;
+    border-color: $colorIconBlue;
 }
 
 .other {
-    border-color: $colorIconBrown;
     color: $colorIconBrown;
+    border-color: $colorIconBrown;
 }
 
 .other:hover {
-    border-color: $colorIconBrown;
     color: $colorIconBrown;
+    border-color: $colorIconBrown;
 }
 
 .display {
-    margin: 0 2rem;
-    font-weight: $fontWeightMedium;
     padding-top: 2rem;
-    text-align: center;
+    margin: 0 2rem;
     color: $colorFontRed;
+    font-weight: $fontWeightMedium;
+    text-align: center;
 }

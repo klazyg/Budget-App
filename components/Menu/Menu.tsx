@@ -27,8 +27,7 @@ const Menu: React.FC = () => {
           <Link href="/">
             <li className={styles.item}>
               <FaHome
-                className={styles.icon}
-              />
+                className={styles.icon} />
               <div className={styles.text}>
                 Home
               </div>
@@ -37,8 +36,7 @@ const Menu: React.FC = () => {
           <Link href="/income">
             <li className={styles.item}>
               <FaFileInvoice
-                className={styles.icon}
-              />
+                className={styles.icon} />
               <div className={styles.text}>
                 Income
               </div>
@@ -47,8 +45,7 @@ const Menu: React.FC = () => {
           <Link href="/savings">
             <li className={styles.item}>
               <MdSavings
-                className={styles.icon}
-              />
+                className={styles.icon} />
               <div className={styles.text}>
                 Savings
               </div>
@@ -57,8 +54,7 @@ const Menu: React.FC = () => {
           <Link href="/transactions">
             <li className={styles.item}>
               <FaMoneyCheckAlt
-                className={styles.icon}
-              />
+                className={styles.icon} />
               <div className={styles.text}>
                 Transactions
               </div>

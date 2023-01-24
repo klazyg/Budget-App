@@ -1,1 +1,14 @@
 @import '/styles/main.module.scss';
+
+.footer {
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    padding: 1rem;
+    width: 100%;
+    color: $colorFontBlack;
+    font-weight: $fontWeightSemiBold;
+    text-align: right;
+}
