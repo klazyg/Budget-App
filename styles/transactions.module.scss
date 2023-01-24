@@ -31,22 +31,27 @@
     width: 50%;
 }
 
-.type {
-    width: 10%;
-}
-
 .amount {
     width: 10%;
 }
 
 .when {
-    width: 10%;
+    width: 20%;
 }
 
 .category {
     width: 20%;
 }
 
-.table tbody {
-    border-bottom: 1px solid black;
+.display {
+    text-align: center;
+    padding-top: 2rem;
+    font-weight: $fontWeightBold;
+    font-size: 1.4rem;
+    color: red;
+}
+
+
+.tr {
+    text-transform: capitalize;
 }
