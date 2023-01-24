@@ -1,7 +1,7 @@
 import React from "react";
 import Link from 'next/link';
 import styles from "./BiggestExpenses.module.scss";
-import { FaShoppingBag } from 'react-icons/fa';
+import { FaShoppingBag, FaWallet } from 'react-icons/fa';
 import { MdFastfood, MdRestaurant, MdTrain, MdHealthAndSafety } from 'react-icons/md';
 import { GiClothes } from 'react-icons/gi';
 import { IconContext } from 'react-icons';
@@ -17,13 +17,29 @@ const categoryIcons = {
   'transport': MdTrain,
   'fees': FaShoppingBag,
   'clothes': GiClothes,
-  'otherExpenses': FaShoppingBag,
+  'other': FaWallet,
 }
 
 const BiggestExpenses: React.FC<Props> = ({ sortedTransactions }) => {
+  if (!sortedTransactions.length) {
+    return (
+      <div className={styles.position}>
+        <div className={styles.border}>
+          <div className={styles.text}>
+            <div className={styles.title}>
+              The biggest expenses
+            </div>
+          </div>
+          <div className={styles.display}>
+            <span>There are no transactions to display.</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
   let biggestExpenses;
   if (sortedTransactions) {
-    biggestExpenses = sortedTransactions.slice(0, 4).map((transaction, index) => {
+    biggestExpenses = sortedTransactions.slice(0, 6).map((transaction, index) => {
       let Icon = categoryIcons[transaction.category];
       return (
         <div className={styles.container}>
