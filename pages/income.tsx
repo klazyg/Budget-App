@@ -13,6 +13,31 @@ interface TransactionsProps {
 }
 
 const Income: React.FC<TransactionsProps> = ({ transactions }) => {
+    if (!transactions.length) {
+        return (
+            <div className={styles.position}>
+                <div className={styles.border}>
+                    <div className={styles.text}>
+                        <div className={styles.title}>
+                            All Income
+                        </div>
+                    </div>
+                    <table className={styles.table}>
+                        <thead>
+                            <tr>
+                                <th className={styles.what}>What</th>
+                                <th className={styles.amount}>Amount</th>
+                                <th className={styles.when}>When</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div className={styles.display}>
+                        <span>No income</span>
+                    </div>
+                </div>
+            </div>
+        );
+    }
     return (
         <div className={styles.position}>
             <div className={styles.border}>
