@@ -12,7 +12,7 @@
 .border {
     border-radius: 20px;
     background-color: $colorBg;
-    padding: 2rem 0;
+    padding: 2rem 0 1rem 0;
 }
 
 .text {
@@ -48,7 +48,7 @@
 
 .transaction {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-bottom: 1.3rem;
     margin: 0 2rem;
     cursor: pointer;
@@ -183,12 +183,20 @@
     color: $colorIconBlue;
 }
 
-.otherExpense {
-    border-color: $colorIconMenu;
-    color: $colorIconMenu;
+.other {
+    border-color: $colorIconBrown;
+    color: $colorIconBrown;
 }
 
-.otherExpense:hover {
-    border-color: $colorIconMenu;
-    color: $colorIconMenu;
+.other:hover {
+    border-color: $colorIconBrown;
+    color: $colorIconBrown;
+}
+
+.display {
+    margin: 0 2rem;
+    font-weight: $fontWeightMedium;
+    padding-top: 2rem;
+    text-align: center;
+    color: red;
 }
