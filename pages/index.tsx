@@ -33,7 +33,7 @@ const Home: React.FC = ({ transactionsData }) => {
     transport: transactions.filter(t => t.category === 'transport'),
     fees: transactions.filter(t => t.category === 'fees'),
     clothes: transactions.filter(t => t.category === 'clothes'),
-    otherExpenses: transactions.filter(t => t.category === 'otherExpenses')
+    other: transactions.filter(t => t.category === 'other')
   };
 
   const categoryTotals = Object.entries(transactionsByCategory).map(([category, transactions]) => ({
