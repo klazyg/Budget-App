@@ -11,7 +11,7 @@
 .border {
     border-radius: 20px;
     background-color: $colorBg;
-    padding: 2rem 0;
+    padding: 2rem 0 1rem 0;
 }
 
 .text {
@@ -121,7 +121,7 @@
     color: $colorIconBlue;
 }
 
-.otherExpense {
-    border-color: $colorIconMenu;
-    color: $colorIconMenu;
+.other {
+    border-color: $colorIconBrown;
+    color: $colorIconBrown;
 }
