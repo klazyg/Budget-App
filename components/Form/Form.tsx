@@ -93,7 +93,7 @@ const Form: React.FC<Props> = ({ onSubmitTransaction }) => {
         <div className={styles.position}>
           <label className={styles.title_what}>What?:</label>
           <textarea
-            className={styles.input_what}
+            className={styles.textarea_what}
             value={what}
             onChange={handleWhatChange}
             required
@@ -105,7 +105,7 @@ const Form: React.FC<Props> = ({ onSubmitTransaction }) => {
             <option value="spend">Spend</option>
             <option value="savings">Savings</option>
           </select>
-          <label className={styles.title}>Amount:</label>
+          <label className={styles.title}>Amount (in $):</label>
           <input
             className={styles.input}
             type="number"
