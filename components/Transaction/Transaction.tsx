@@ -2,8 +2,7 @@ import React from "react";
 import Link from 'next/link';
 import styles from "./Transaction.module.scss";
 import { IconContext } from 'react-icons';
-import axios from "axios";
-import { FaShoppingBag } from 'react-icons/fa';
+import { FaShoppingBag, FaWallet } from 'react-icons/fa';
 import { MdFastfood, MdRestaurant, MdTrain, MdHealthAndSafety } from 'react-icons/md';
 import { GiClothes } from 'react-icons/gi';
 import moment from 'moment';
@@ -27,10 +26,26 @@ const categoryIcons = {
   'transport': MdTrain,
   'fees': FaShoppingBag,
   'clothes': GiClothes,
-  'otherExpenses': FaShoppingBag,
+  'other': FaWallet,
 }
 
 const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
+  if (!transactions.length) {
+    return (
+      <div className={styles.position}>
+        <div className={styles.border}>
+          <div className={styles.text}>
+            <div className={styles.title}>
+              Latest Transactions
+            </div>
+          </div>
+          <div className={styles.display}>
+            <span>There are no transactions to display.</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
   let transaction;
   if (transactions) {
     transaction = transactions.slice(0, 4).map((transaction, index) => {
