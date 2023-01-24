@@ -29,7 +29,7 @@
 
 .viewMore {
     font-weight: $fontWeightSemiBold;
-    color: $colorFontPurple;
+    color: $colorPurple;
     cursor: pointer;
 }
 
@@ -57,11 +57,11 @@
 .transaction:hover {
     transition: transform 0.2s;
     transform: scale(1.1);
-    color: $colorFontPurple;
+    color: $colorPurple;
 }
 
 .icon_border {
-    border: 0.2rem solid $colorFontPurple;
+    border: 0.2rem solid $colorPurple;
     border-radius: 10px;
     width: 3rem;
     height: 3rem;
@@ -107,7 +107,7 @@
 
 .amount {
     font-weight: $fontWeightSemiBold;
-    color: red;
+    color: $colorFontRed;
     font-size: 1.2rem;
     display: flex;
     justify-content: center;
@@ -116,11 +116,11 @@
 }
 
 .amount-income {
-    color: green;
+    color: $colorFontGreen;
 }
 
 .amount-spend {
-    color: red;
+    color: $colorFontRed;
 }
 
 .food {
@@ -198,5 +198,5 @@
     font-weight: $fontWeightMedium;
     padding-top: 2rem;
     text-align: center;
-    color: red;
+    color: $colorFontRed;
 }

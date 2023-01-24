@@ -21,13 +21,11 @@
 
 .viewMore {
     font-weight: $fontWeightSemiBold;
-    color: $colorFontPurple;
+    color: $colorPurple;
     cursor: pointer;
 }
 
 .viewMore:hover {
     transition: transform 0.2s;
     transform: scale(1.1);
-  }
-
-// @include gradient(to right, $colorChartGradient);
+}

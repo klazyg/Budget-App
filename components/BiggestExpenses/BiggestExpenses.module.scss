@@ -2,10 +2,10 @@
 
 .position {
     padding: 2rem 0;
-    width: 80%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    width: 80%;
 }
 
 .border {
@@ -17,7 +17,7 @@
 .text {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 2rem;
+    padding-bottom: 1.2rem;
     margin: 0 1.5rem;
 }
 
@@ -28,7 +28,7 @@
 
 .viewMore {
     font-weight: $fontWeightSemiBold;
-    color: $colorFontPurple;
+    color: $colorPurple;
     cursor: pointer;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .categoryContainer {
-    border: 0.2rem solid $colorFontPurple;
+    border: 0.2rem solid $colorPurple;
     border-radius: 12px;
     width: 8rem;
     height: 8rem;
@@ -124,4 +124,12 @@
 .other {
     border-color: $colorIconBrown;
     color: $colorIconBrown;
+}
+
+.display {
+    margin: 0 2rem;
+    font-weight: $fontWeightMedium;
+    padding-top: 2rem;
+    text-align: center;
+    color: $colorFontRed;
 }

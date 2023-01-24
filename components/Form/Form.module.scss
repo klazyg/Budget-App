@@ -26,7 +26,7 @@
     justify-content: center;
     resize: none;
     text-transform: none;
-    border: solid 3px $colorBgDarkPurple;
+    border: solid 3px $colorPurple;
     flex-wrap: wrap;
     border-radius: 20px;
     outline: none;
@@ -47,7 +47,7 @@
 .select {
     display: flex;
     justify-content: center;
-    border: solid 3px $colorBgDarkPurple;
+    border: solid 3px $colorPurple;
     flex-wrap: wrap;
     border-radius: 20px;
     overflow: hidden;
@@ -61,7 +61,7 @@
 .input {
     display: flex;
     justify-content: center;
-    border: solid 3px $colorBgDarkPurple;
+    border: solid 3px $colorPurple;
     text-transform: capitalize;
     flex-wrap: wrap;
     padding: 0.5rem 0;
@@ -76,7 +76,7 @@
 .input_date {
     display: flex;
     justify-content: center;
-    border: solid 3px $colorBgDarkPurple;
+    border: solid 3px $colorPurple;
     text-transform: capitalize;
     flex-wrap: wrap;
     padding: 0.5rem 0;
@@ -98,13 +98,13 @@
 
 .btn {
     width: 100%;
-    background-color: $colorBgDarkPurple;
-    border: solid $colorBgDarkPurple;
+    background-color: $colorPurple;
+    border: solid $colorPurple;
     cursor: pointer;
     border-radius: 20px;
     height: 3rem;
     font-size: 1.4rem;
-    color: white;
+    color: $colorBg;
 }
 
 .btn:hover {
