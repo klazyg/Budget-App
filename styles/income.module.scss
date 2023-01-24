@@ -19,7 +19,7 @@
 
 .title {
     font-weight: $fontWeightBold;
-    font-size: 1.3rem;
+    font-size: $fontSizeXLarge;
 }
 
 .table {
@@ -43,6 +43,6 @@
     text-align: center;
     padding-top: 2rem;
     font-weight: $fontWeightBold;
-    font-size: 1.4rem;
+    font-size: $fontSizeXXLarge;
     color: $colorFontRed;
 }

@@ -24,7 +24,7 @@
 
 .title {
     font-weight: $fontWeightBold;
-    font-size: 1.3rem;
+    font-size: $fontSizeXLarge;
 }
 
 .viewMore {
@@ -41,7 +41,7 @@
 .date {
     color: $colorFontGrey;
     font-weight: $fontWeightMedium;
-    font-size: 0.8rem;
+    font-size: $fontSizeXSmall;
     margin: 0 1.5rem;
     padding: 0.6rem 0 1rem 0;
 }
@@ -90,14 +90,14 @@
 .category {
     color: $colorFontGrey;
     font-weight: $fontWeightMedium;
-    font-size: 0.9rem;
+    font-size: $fontSizeXSmall;
     text-transform: capitalize;
 }
 
 .calendar {
     color: $colorFontGrey;
     font-weight: $fontWeightMedium;
-    font-size: 0.8rem;
+    font-size: $fontSizeXSmall;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +108,7 @@
 .amount {
     font-weight: $fontWeightSemiBold;
     color: $colorFontRed;
-    font-size: 1.2rem;
+    font-size: $fontSizeLarge;
     display: flex;
     justify-content: center;
     align-items: center;

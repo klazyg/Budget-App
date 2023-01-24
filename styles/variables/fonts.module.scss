@@ -3,16 +3,25 @@
 // FONT DEFAULT SIZE
 $fontSizeDefault: 16px;
 
+
 //FONT FAMILIES
 $fontDefault: 'Poppins', sans-serif;
 
+
 // FONT-WEIGHTS
-$fontWeightLight: 300;
-$fontWeightRegular: 400;
 $fontWeightMedium: 500;
 $fontWeightSemiBold: 600;
 $fontWeightBold: 700;
-$fontWeightExtraBold: 800;
+
+
+// FONT SIZES
+$fontSizeXSmall: 0.8rem;
+$fontSizeMedium: 1.1rem;
+$fontSizeLarge: 1.2rem;
+$fontSizeXLarge: 1.3rem;
+$fontSizeXXLarge: 1.4rem;
+$fontSizeXXXLarge: 1.5rem;
+
 
 // LINE HEIGHT
 $lineHeightDefault: 1rem;

@@ -17,7 +17,7 @@
 
 .title_what {
     font-weight: $fontWeightBold;
-    font-size: 1rem;
+    font-size: $fontSizeMedium;
     padding-bottom: 0.8rem;
 }
 
@@ -34,12 +34,12 @@
     overflow: hidden;
     min-height: 100px;
     max-height: 300px;
-    font-size: 1.1rem;
+    font-size: $fontSizeMedium;
 }
 
 .title {
     font-weight: $fontWeightBold;
-    font-size: 1rem;
+    font-size: $fontSizeMedium;
     padding-top: 2rem;
     padding-bottom: 0.8rem;
 }
@@ -54,7 +54,7 @@
     outline: none;
     padding: 1rem;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: $fontSizeMedium;
     height: 60px;
 }
 
@@ -70,7 +70,7 @@
     outline: none;
     padding: 1rem;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: $fontSizeMedium;
 }
 
 .input_date {
@@ -85,7 +85,7 @@
     outline: none;
     padding: 1rem;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: $fontSizeMedium;
 }
 
 .text:focus {
@@ -103,7 +103,7 @@
     cursor: pointer;
     border-radius: 20px;
     height: 3rem;
-    font-size: 1.4rem;
+    font-size: $fontSizeXXLarge;
     color: $colorBg;
 }
 
