@@ -24,46 +24,46 @@ const Menu: React.FC = () => {
           </div>
         </div>
         <ul className={styles.list}>
-          <li className={styles.item}>
-            <Link href="/">
+          <Link href="/">
+            <li className={styles.item}>
               <FaHome
                 className={styles.icon}
               />
               <div className={styles.text}>
                 Home
               </div>
-            </Link>
-          </li>
-          <li className={styles.item}>
-            <Link href="/income">
+            </li>
+          </Link>
+          <Link href="/income">
+            <li className={styles.item}>
               <FaFileInvoice
                 className={styles.icon}
               />
               <div className={styles.text}>
                 Income
               </div>
-            </Link>
-          </li>
-          <li className={styles.item}>
-            <Link href="/savings">
+            </li>
+          </Link>
+          <Link href="/savings">
+            <li className={styles.item}>
               <MdSavings
                 className={styles.icon}
               />
               <div className={styles.text}>
                 Savings
               </div>
-            </Link>
-          </li>
-          <li className={styles.item}>
-            <Link href="/transactions">
+            </li>
+          </Link>
+          <Link href="/transactions">
+            <li className={styles.item}>
               <FaMoneyCheckAlt
                 className={styles.icon}
               />
               <div className={styles.text}>
                 Transactions
               </div>
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </nav>
     </IconContext.Provider >
