@@ -13,6 +13,7 @@ interface TransactionsProps {
 }
 
 const Savings: React.FC<TransactionsProps> = ({ transactions }) => {
+    const totalAmount = transactions.reduce((total, transaction) => total + Number(transaction.amount), 0);
     if (!transactions.length) {
         return (
             <div className={styles.position}>
@@ -64,6 +65,7 @@ const Savings: React.FC<TransactionsProps> = ({ transactions }) => {
                         ))}
                     </tbody>
                 </table>
+                <div>Total Amount: {totalAmount}</div>
             </div>
         </div>
     );
