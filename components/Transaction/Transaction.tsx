@@ -30,7 +30,8 @@ const categoryIcons = {
 }
 
 const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
-  const transactionsToDisplay = transactions.filter(transaction => transaction.type === 'spend');
+  const transactionsToDisplay = transactions.filter(transaction => transaction.type === 'spend')
+  .reverse();
   if (!transactionsToDisplay.length) {
     return (
       <div className={styles.position}>
