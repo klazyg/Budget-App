@@ -46,6 +46,7 @@ const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
       </div>
     );
   }
+  let previousTransactionDate;
   let transaction;
   if (transactions) {
     transaction = transactions.slice(0, 4).map((transaction, index) => {
@@ -61,11 +62,16 @@ const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
       } else {
         when = moment(transaction.when).format("MMM DD, YYYY");
       }
+      let showDate = true;
+      if (previousTransactionDate === transaction.when) {
+        showDate = false;
+      }
+      previousTransactionDate = transaction.when;
       return (
         <Link key={index} href="/transactions">
-          <div className={styles.date}>
+          {showDate && <div className={styles.date}>
             {when}
-          </div>
+          </div>}
           <div className={`${styles.transaction} ${styles.categoryContainer} ${styles[transaction.category]}`} key={index}>
             <div className={borderClass} key={index}>
               <Icon className={styles.icon} />
@@ -88,26 +94,26 @@ const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
         </Link>
       );
     });
-    return (
-      <IconContext.Provider value={{ size: '2rem' }}>
-        <div className={styles.position}>
-          <div className={styles.border}>
-            <div className={styles.text}>
-              <div className={styles.title}>
-                Latest Transactions
-              </div>
-              <Link href="/transactions">
-                <div className={styles.viewMore}>
-                  view more
-                </div>
-              </Link>
-            </div>
-            {transaction}
-          </div>
-        </div>
-      </IconContext.Provider >
-    );
   }
+  return (
+    <IconContext.Provider value={{ size: '2rem' }}>
+      <div className={styles.position}>
+        <div className={styles.border}>
+          <div className={styles.text}>
+            <div className={styles.title}>
+              Latest Transactions
+            </div>
+            <Link href="/transactions">
+              <div className={styles.viewMore}>
+                view more
+              </div>
+            </Link>
+          </div>
+          {transaction}
+        </div>
+      </div>
+    </IconContext.Provider >
+  );
 };
 
 export default Transactions;
