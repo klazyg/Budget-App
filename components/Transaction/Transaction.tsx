@@ -30,7 +30,8 @@ const categoryIcons = {
 }
 
 const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
-  if (!transactions.length) {
+  const transactionsToDisplay = transactions.filter(transaction => transaction.type === 'spend');
+  if (!transactionsToDisplay.length) {
     return (
       <div className={styles.position}>
         <div className={styles.border}>
@@ -48,8 +49,8 @@ const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
   }
   let previousTransactionDate;
   let transaction;
-  if (transactions) {
-    transaction = transactions.slice(0, 4).map((transaction, index) => {
+  if (transactionsToDisplay) {
+    transaction = transactionsToDisplay.slice(0, 4).map((transaction, index) => {
       let Icon = categoryIcons[transaction.category];
       let borderClass = `${styles.icon_border} ${styles.categoryContainer} ${styles[transaction.category]}`;
       let when;
