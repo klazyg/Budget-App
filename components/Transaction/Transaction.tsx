@@ -7,16 +7,8 @@ import { MdFastfood, MdRestaurant, MdTrain, MdHealthAndSafety } from 'react-icon
 import { GiClothes } from 'react-icons/gi';
 import moment from 'moment';
 
-interface Transaction {
-  what: string;
-  type: string;
-  amount: string;
-  when: string;
-  category: string;
-}
-
 interface TransactionsProps {
-  transactions: Transaction[];
+  transactions: {what: string; type: string; amount: string; when: string; category: string;}[];
 }
 
 const categoryIcons = {

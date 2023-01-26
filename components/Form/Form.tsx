@@ -20,10 +20,7 @@ const Form: React.FC<Props> = ({ onSubmitTransaction }) => {
   const [amount, setAmount] = useState<number>(0);
   const [when, setWhen] = useState('');
   const [category, setCategory] = useState('');
-  const [incomeTransactions, setIncomeTransactions] = useState([]);
-  const [spendTransactions, setSpendTransactions] = useState([]);
-  const [savingsTransactions, setSavingsTransactions] = useState([]);
-  const [transactions, setTransactions] = useState([...incomeTransactions, ...spendTransactions, ...savingsTransactions]);
+  const [transactions, setTransactions] = useState([]);
 
   const handleWhatChange = (event) => {
     setWhat(event.target.value);
@@ -63,29 +60,9 @@ const Form: React.FC<Props> = ({ onSubmitTransaction }) => {
   };
 
   const onSubmitTransactions = (transaction: Transaction) => {
-    if (transaction.type === 'income') {
-      setIncomeTransactions((prevTransactions) => [
-        ...prevTransactions,
-        transaction,
-      ]);
-    } else if (transaction.type === 'spend') {
-      setSpendTransactions((prevTransactions) => [
-        ...prevTransactions,
-        transaction,
-      ]);
-    } else if (transaction.type === 'savings') {
-      setSavingsTransactions((prevTransactions) => [
-        ...prevTransactions,
-        transaction
-      ]);
-    }
     setTransactions(prevTransactions => [...prevTransactions, transaction]);
     axios.post("/api/transactions", { transactions: [transaction] });
   };
-
-  const incomeTotal = incomeTransactions.reduce((total, transaction) => total + parseFloat(transaction.amount), 0);
-  const spendTotal = spendTransactions.reduce((total, transaction) => total + parseFloat(transaction.amount), 0);
-  const savingsTotal = savingsTransactions.reduce((total, transaction) => total + parseFloat(transaction.amount), 0);
 
   return (
     <div className={styles.section}>
