@@ -7,7 +7,7 @@ import { GiClothes } from 'react-icons/gi';
 import { IconContext } from 'react-icons';
 
 type Props = {
-  sortedTransactions: Array<{ category: string, total: number }>;
+  sortedTransactions: Array<{ type: string, category: string, total: number }>;
 }
 
 const categoryIcons = {
@@ -21,7 +21,8 @@ const categoryIcons = {
 }
 
 const BiggestExpenses: React.FC<Props> = ({ sortedTransactions }) => {
-  if (!sortedTransactions.length) {
+  const sortedTransactionsToDisplay = sortedTransactions.filter(transaction => transaction.type === 'spend')
+  if (!sortedTransactionsToDisplay.length) {
     return (
       <div className={styles.position}>
         <div className={styles.border}>
@@ -37,9 +38,8 @@ const BiggestExpenses: React.FC<Props> = ({ sortedTransactions }) => {
       </div>
     );
   }
-  let biggestExpenses;
-  if (sortedTransactions) {
-    biggestExpenses = sortedTransactions.slice(0, 6).map((transaction, index) => {
+  if (sortedTransactionsToDisplay) {
+    let biggestExpenses = sortedTransactionsToDisplay.slice(0, 6).map((transaction, index) => {
       let Icon = categoryIcons[transaction.category];
       return (
         <div className={styles.item}>
