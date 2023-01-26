@@ -63,7 +63,7 @@ const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
                         {transactions.map((transaction, index) => (
                             <tr key={index} className={styles.tr}>
                                 <td>{transaction.what}</td>
-                                <td>{transaction.amount}</td>
+                                <td>${transaction.amount}</td>
                                 <td>{transaction.when}</td>
                                 <td>{transaction.category}</td>
                             </tr>
