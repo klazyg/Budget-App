@@ -15,11 +15,11 @@ const TotalCosts: React.FC<{
       <div className={styles.position}>
         <div className={styles.border}>
           <div className={styles.icon_border_position}>
-          <div className={styles.icon_border_income}>
-            <GiCash
-              className={styles.icon_income}
-            />
-          </div>
+            <div className={styles.icon_border_income}>
+              <GiCash
+                className={styles.icon_income}
+              />
+            </div>
           </div>
           <div className={styles.text}>
             <div className={styles.title}>
@@ -31,12 +31,12 @@ const TotalCosts: React.FC<{
           </div>
         </div>
         <div className={styles.border}>
-        <div className={styles.icon_border_position}>
-          <div className={styles.icon_border_spend}>
-            <FaWallet
-              className={styles.icon_spend}
-            />
-          </div>
+          <div className={styles.icon_border_position}>
+            <div className={styles.icon_border_spend}>
+              <FaWallet
+                className={styles.icon_spend}
+              />
+            </div>
           </div>
           <div className={styles.text}>
             <div className={styles.title}>
@@ -48,12 +48,12 @@ const TotalCosts: React.FC<{
           </div>
         </div>
         <div className={styles.border}>
-        <div className={styles.icon_border_position}>
-          <div className={styles.icon_border_savings}>
-            <MdSavings
-              className={styles.icon_savings}
-            />
-          </div>
+          <div className={styles.icon_border_position}>
+            <div className={styles.icon_border_savings}>
+              <MdSavings
+                className={styles.icon_savings}
+              />
+            </div>
           </div>
           <div className={styles.text}>
             <div className={styles.title}>
