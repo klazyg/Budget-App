@@ -25,6 +25,7 @@
 .table {
     width: 100%;
     text-align: center;
+    cursor: pointer;
 }
 
 .what {
@@ -53,4 +54,13 @@
 
 .tr {
     text-transform: capitalize;
+}
+
+.total {
+    padding-top: 2rem;
+    margin-right: 2rem;
+    text-align: right;
+    color: $colorPurple;
+    font-size: $fontSizeXLarge;
+    font-weight: $fontWeightBold;
 }

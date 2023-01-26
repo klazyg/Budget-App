@@ -65,7 +65,7 @@ const Savings: React.FC<TransactionsProps> = ({ transactions }) => {
                         ))}
                     </tbody>
                 </table>
-                <div>Total Amount: {totalAmount}</div>
+                <div className={styles.total}>Total Amount: +${totalAmount}</div>
             </div>
         </div>
     );
