@@ -2,16 +2,9 @@ import React from 'react';
 import Menu from "../../components/Menu/Menu";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import _app from '../../pages/_app';
 import styles from './Layout.module.scss';
 
-type Props = {
-    Component: any;
-    pageProps: any;
-    children: any;
-};
-
-const Layout: React.FC<Props> = ({ Component, pageProps }) => {
+export default function Layout({ children }) {
     return (
         <>
             <Menu />
@@ -19,7 +12,7 @@ const Layout: React.FC<Props> = ({ Component, pageProps }) => {
                 <Header />
                 <div className={styles.color}>
                     <div className={styles.inner}>
-                        <Component {...pageProps} />
+                        {children}
                     </div>
                 </div>
                 <Footer />
@@ -27,5 +20,3 @@ const Layout: React.FC<Props> = ({ Component, pageProps }) => {
         </>
     );
 }
-
-export default Layout;
