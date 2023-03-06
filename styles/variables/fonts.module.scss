@@ -8,6 +8,10 @@ $fontSizeDefault: 16px;
 $fontDefault: 'Poppins', sans-serif;
 
 
+// LINE HEIGHT
+$lineHeightDefault: 1rem;
+
+
 // FONT-WEIGHTS
 $fontWeightMedium: 500;
 $fontWeightSemiBold: 600;
@@ -16,6 +20,7 @@ $fontWeightBold: 700;
 
 // FONT SIZES
 $fontSizeXSmall: 0.8rem;
+$fontSizeSmall: 1rem;
 $fontSizeMedium: 1.1rem;
 $fontSizeLarge: 1.2rem;
 $fontSizeXLarge: 1.3rem;
@@ -23,5 +28,176 @@ $fontSizeXXLarge: 1.4rem;
 $fontSizeXXXLarge: 1.5rem;
 
 
-// LINE HEIGHT
-$lineHeightDefault: 1rem;
+// RESPONSIVE FONT SIZES
+$fontSizeXSmallXL: 0.7rem;
+$fontSizeSmallXL: 0.9rem;
+$fontSizeMediumXL: 1rem;
+$fontSizeLargeXL: 1.1rem;
+$fontSizeXLargeXL: 1.2rem;
+$fontSizeXXLargeXL: 1.3rem;
+$fontSizeXXXLargeXL: 1.4rem;
+
+$fontSizeXSmallL: 0.7rem;
+$fontSizeSmallL: 0.8rem;
+$fontSizeMediumL: 0.9rem;
+$fontSizeLargeL: 1rem;
+$fontSizeXLargeL: 1.1rem;
+$fontSizeXXLargeL: 1.2rem;
+$fontSizeXXXLargeL: 1.3rem;
+
+$fontSizeXSmallM: 0.7rem;
+$fontSizeSmallM: 0.8rem;
+$fontSizeMediumM: 0.9rem;
+$fontSizeLargeM: 0.9rem;
+$fontSizeXLargeM: 1rem;
+$fontSizeXXLargeM: 1.1rem;
+$fontSizeXXXLargeM: 1.2rem;
+
+$fontSizeXSmallS: 0.7rem;
+$fontSizeSmallS: 0.7rem;
+$fontSizeMediumS: 0.8rem;
+$fontSizeLargeS: 0.8rem;
+$fontSizeXLargeS: 0.9rem;
+$fontSizeXXLargeS: 1rem;
+$fontSizeXXXLargeS: 1.1rem;
+
+
+@mixin FontSizeXSmall {
+    font-size: $fontSizeXSmall;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeXSmallXL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeXSmallL;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeXSmallM;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeXSmallS;
+    }
+}
+
+@mixin FontSizeSmall {
+    font-size: $fontSizeSmall;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeSmallXL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeSmallL;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeSmallM;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeSmallS;
+    }
+}
+
+@mixin FontSizeMedium {
+    font-size: $fontSizeMedium;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeMediumXL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeMediumL;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeMediumM;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeMediumS;
+    }
+}
+
+@mixin FontSizeLarge {
+    font-size: $fontSizeLarge;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeLargeXL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeLargeL;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeLargeM;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeLargeS;
+    }
+}
+
+@mixin FontSizeXLarge {
+    font-size: $fontSizeXLarge;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeXLargeXL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeXLargeL;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeXLargeM;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeXLargeS;
+    }
+}
+
+@mixin FontSizeXXLarge {
+    font-size: $fontSizeXXLarge;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeXXLargeXL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeXXLargeL;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeXXLargeM;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeXXLargeS;
+    }
+}
+
+@mixin FontSizeXXXLarge {
+    font-size: $fontSizeXXXLarge;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeXXXLargeXL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeXXXLargeL;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeXXXLargeM;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeXXXLargeS;
+    }
+}
