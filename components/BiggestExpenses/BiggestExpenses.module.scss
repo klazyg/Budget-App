@@ -53,7 +53,7 @@
 }
 
 .total {
-    font-size: $fontSizeMedium;
+    @include FontSizeMedium;
 }
 
 .categoryContainer:hover {
@@ -62,8 +62,8 @@
 }
 
 .category {
+    @include FontSizeLarge;
     padding-bottom: 1rem;
-    font-size: $fontSizeLarge;
     font-weight: $fontWeightSemiBold;
     text-align: center;
     text-transform: capitalize;
