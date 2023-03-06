@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TotalCosts from "../components/TotalCosts/TotalCosts";
 import Transaction from "../components/Transaction/Transaction";
 import Form from "../components/Form/Form";
 import BiggestExpenses from '../components/BiggestExpenses/BiggestExpenses';
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/Home.module.scss';
 import RevenueChart from '../components/RevenueChart/RevenueChart';
 import axios from 'axios';
 
+export type TTransactionType = "spend" | "income" | "savings";
+export interface ITransaction {
+  what: string;
+  type: TTransactionType;
+  amount: number;
+  when: string;
+  category: string;
+}
+interface ICategoryTotal {
+  category: string;
+  total: number;
+}
 interface HomeProps {
-  transactionsData: Transaction[];
+  transactionsData: ITransaction[];
 }
 
 const Home: React.FC<HomeProps> = ({ transactionsData }) => {
@@ -16,6 +28,7 @@ const Home: React.FC<HomeProps> = ({ transactionsData }) => {
 
   const onSubmitTransaction = (transaction) => {
     setTransactions((prevTransactions) => [...prevTransactions, transaction]);
+    axios.post("/api/transactions", { transactions: [transaction] });
   }
 
   const calculateTotal = (type) => transactions
@@ -26,27 +39,28 @@ const Home: React.FC<HomeProps> = ({ transactionsData }) => {
   const spendTotal = calculateTotal('spend');
   const savingsTotal = calculateTotal('savings');
 
-  const transactionsByCategory = transactions.reduce((acc, curr) => {
-    acc[curr.category] = acc[curr.category] || [];
-    acc[curr.category].push(curr);
-    return acc;
-  }, {});
+  const sumSpendByCategory = (transactions: ITransaction[]): ICategoryTotal[] => {
+    const spendTransactions = transactions.filter(transaction => transaction.type === 'spend');
+    const spendByCategory: { [category: string]: number } = {};
 
-  const categoryTotals = Object.entries(transactionsByCategory).map(([category, transactions]) => {
-    const trans = transactions as typeof Transaction[]
-    return {
-      category,
-      total: trans.reduce((total, transaction) => total + transaction.amount, 0)
-    }
-  });
+    spendTransactions.forEach(transaction => {
+      const { category, amount } = transaction;
+      if (spendByCategory[category]) {
+        spendByCategory[category] += amount;
+      } else {
+        spendByCategory[category] = amount;
+      }
+    });
 
-  const sortedTransactions = categoryTotals
-    .sort((a, b) => b.total - a.total)
-    .map(t => ({
-      type: "spend",
-      category: t.category,
-      total: t.total
-    }));
+    const result = Object.entries(spendByCategory)
+      .map(([category, total]) => ({ category, total }))
+      .sort((a, b) => b.total - a.total);
+
+    return result;
+  };
+
+  const categoryTotals = sumSpendByCategory(transactions);
+
   return (
     <div className={styles.container}>
       <div className={styles.leftWidth}>
@@ -55,10 +69,10 @@ const Home: React.FC<HomeProps> = ({ transactionsData }) => {
           spendTotal={spendTotal}
           savingsTotal={savingsTotal}
         />
-        <RevenueChart />
+        <RevenueChart transactions={transactions.filter((x) => (x.type == "income"))} />
         <div className={styles.gridItem}>
           <Transaction transactions={transactions} />
-          <BiggestExpenses sortedTransactions={sortedTransactions} />
+          <BiggestExpenses sortedTransactions={categoryTotals} />
         </div>
       </div>
       <div className={styles.rightWidth}>
@@ -69,12 +83,21 @@ const Home: React.FC<HomeProps> = ({ transactionsData }) => {
 };
 
 export async function getServerSideProps() {
-  const apiResponse = await axios.get("http:localhost:3000/api/transactions");
-  return {
-    props: {
-      transactionsData: apiResponse.data.transactions,
-    },
-  };
+  try {
+    const response = await axios.get("http://localhost:3000/api/transactions");
+    return {
+      props: {
+        transactionsData: response.data.transactions,
+      },
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: {
+        transactionsData: [],
+      },
+    };
+  }
 }
 
 export default Home;
