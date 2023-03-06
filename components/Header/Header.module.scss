@@ -7,7 +7,7 @@
 }
 
 .title {
-    font-size: $fontSizeXXXLarge;
+    @include FontSizeXXXLarge;
     font-weight: $fontWeightBold;
     cursor: pointer;
 }
