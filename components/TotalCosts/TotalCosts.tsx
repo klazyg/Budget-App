@@ -1,4 +1,3 @@
-import React from "react";
 import { IconContext } from 'react-icons';
 import { FaWallet } from 'react-icons/fa';
 import { GiCash } from 'react-icons/gi';

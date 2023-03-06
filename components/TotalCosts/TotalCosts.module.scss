@@ -35,6 +35,16 @@
     transform: scale(1.1);
 }
 
+.icon_border_spend {
+    @extend .icon_border_income;
+    background-color: $colorBgIconPink;
+}
+
+.icon_border_savings {
+    @extend .icon_border_income;
+    background-color: $colorBgIconBlue;
+}
+
 .icon_income {
     position: relative;
     z-index: 1;
@@ -43,44 +53,14 @@
     vertical-align: middle;
 }
 
-.icon_border_spend {
-    padding: 0.9rem;
-    background-color: $colorBgIconPink;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.icon_border_spend:hover {
-    transition: transform 0.2s;
-    transform: scale(1.1);
-}
-
 .icon_spend {
-    position: relative;
-    z-index: 1;
-    width: 100%;
+    @extend .icon_income;
     color: $colorIconPink;
-    vertical-align: middle;
-}
-
-.icon_border_savings {
-    padding: 0.9rem;
-    background-color: $colorBgIconBlue;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.icon_border_savings:hover {
-    transition: transform 0.2s;
-    transform: scale(1.1);
 }
 
 .icon_savings {
-    position: relative;
-    z-index: 1;
-    width: 100%;
+    @extend .icon_income;
     color: $colorIconBlue;
-    vertical-align: middle;
 }
 
 .title {
@@ -90,15 +70,15 @@
 }
 
 .value {
+    @include FontSizeXXXLarge;
     padding-bottom: 0.5rem;
-    font-size: $fontSizeXXXLarge;
     font-weight: $fontWeightBold;
     text-align: center;
     display: flex;
     justify-content: center;
-}
 
-.value:hover {
-    transition: transform 0.2s;
-    transform: scale(1.1);
+    :hover {
+        transition: transform 0.2s;
+        transform: scale(1.1);
+    }
 }
