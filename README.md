@@ -26,7 +26,7 @@ gh repo clone klazyg/Budget-App
 
 ## :point_right: First steps
 
-Aby korzystać z aplikacji jako użytkownik, wystarczy:
+To use the application as a user, simply:
 
 1. Open the Budget App in your web browser () or follow the instructions in "Getting Started".
 2. Fill out the form with your transaction details. Required information includes:
