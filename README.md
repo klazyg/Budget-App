@@ -17,8 +17,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-You can also use HTTPS protocol to ensure secure communication between the client and the server. To do so, use the following link: https://github.com/klazyg/Budget-App.git.
-
 Alternatively, you can use GitHub CLI, which allows you to clone, fork, and manage the repository directly from the command line. To clone the repository using GitHub CLI, type the following command in your terminal:
 
 ```bash
