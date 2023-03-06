@@ -1,6 +1,5 @@
-import React from "react";
 import Link from 'next/link';
-import { FaHome, FaFileInvoice, FaChartArea, FaMoneyCheckAlt } from 'react-icons/fa';
+import { FaHome, FaFileInvoice, FaMoneyCheckAlt } from 'react-icons/fa';
 import { MdSavings } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
 import { IconContext } from 'react-icons';
@@ -11,9 +10,7 @@ const Menu: React.FC = () => {
     <IconContext.Provider value={{ size: '1.3rem' }}>
       <nav className={styles.menu}>
         <div className={styles.profile}>
-          <div className={styles.border}>
-            <CgProfile className={styles.avatar} />
-          </div>
+          <CgProfile className={styles.avatar} />
           <div className={styles.user}>
             <div className={styles.name}>
               John
