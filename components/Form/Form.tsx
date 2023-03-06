@@ -1,26 +1,17 @@
-import axios from "axios";
-import React, { useState } from "react";
+import { useState } from "react";
+import { ITransaction, TTransactionType } from "../../pages";
 import styles from "./Form.module.scss";
 
-type Transaction = {
-  what: string;
-  type: string;
-  amount: number;
-  when: string;
-  category: string;
-}
-
 type Props = {
-  onSubmitTransaction: (transaction: Transaction) => void;
+  onSubmitTransaction: (transaction: ITransaction) => void;
 }
 
 const Form: React.FC<Props> = ({ onSubmitTransaction }) => {
   const [what, setWhat] = useState('');
-  const [type, setType] = useState('income');
+  const [type, setType] = useState<TTransactionType>('income');
   const [amount, setAmount] = useState<number>(0);
   const [when, setWhen] = useState('');
   const [category, setCategory] = useState('');
-  const [transactions, setTransactions] = useState([]);
 
   const handleWhatChange = (event) => {
     setWhat(event.target.value);
@@ -50,18 +41,11 @@ const Form: React.FC<Props> = ({ onSubmitTransaction }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     onSubmitTransaction({ what, type, amount, when, category });
-    onSubmitTransactions({ what, type, amount, when, category });
     setWhat('');
     setType('income');
     setAmount(0);
     setWhen('');
     setCategory('');
-    setTransactions(prevTransactions => [...prevTransactions, { what, type, amount, when, category }]);
-  };
-
-  const onSubmitTransactions = (transaction: Transaction) => {
-    setTransactions(prevTransactions => [...prevTransactions, transaction]);
-    axios.post("/api/transactions", { transactions: [transaction] });
   };
 
   return (
