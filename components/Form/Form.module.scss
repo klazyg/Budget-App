@@ -16,56 +16,24 @@
 }
 
 .title_what {
+    @include FontSizeMedium;
     padding-bottom: 0.8rem;
     font-weight: $fontWeightBold;
-    font-size: $fontSizeMedium;
-}
-
-.textarea_what {
-    padding: 1rem;
-    border: solid 3px $colorPurple;
-    border-radius: 20px;
-    overflow: hidden;
-    outline: none;
-    min-height: 100px;
-    max-height: 300px;
-    font-size: $fontSizeMedium;
-    text-transform: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    cursor: pointer;
 }
 
 .title {
+    @extend .title_what;
     padding-top: 2rem;
-    padding-bottom: 0.8rem;
-    font-size: $fontSizeMedium;
-    font-weight: $fontWeightBold;
-}
-
-.select {
-    padding: 1rem;
-    border: solid 3px $colorPurple;
-    border-radius: 20px;
-    overflow: hidden;
-    outline: none;
-    height: 3.8rem;
-    font-size: $fontSizeMedium;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    cursor: pointer;
 }
 
 .input {
+    @include FontSizeMedium;
     padding: 0.5rem 0;
-    border: solid 3px $colorPurple;
+    border: solid 2.5px $colorPurple;
     border-radius: 20px;
     overflow: hidden;
     outline: none;
     padding: 1rem;
-    font-size: $fontSizeMedium;
     text-transform: capitalize;
     display: flex;
     justify-content: center;
@@ -74,17 +42,20 @@
 }
 
 .input_date {
+    @extend .input;
     padding: 1rem;
-    border: solid 3px $colorPurple;
-    border-radius: 20px;
-    overflow: hidden;
-    outline: none;
-    font-size: $fontSizeMedium;
-    text-transform: capitalize;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    cursor: pointer;
+}
+
+.textarea_what {
+    @extend .input_date;
+    min-height: 100px;
+    max-height: 300px;
+    text-transform: none;
+}
+
+.select {
+    @extend .input_date;
+    height: 3.8rem;
 }
 
 .text:focus {
@@ -96,13 +67,13 @@
 }
 
 .btn {
+    @include FontSizeXXLarge;
     width: 100%;
     background-color: $colorPurple;
     border: solid $colorPurple;
     border-radius: 20px;
     height: 3rem;
     color: $colorBg;
-    font-size: $fontSizeXXLarge;
     cursor: pointer;
 }
 

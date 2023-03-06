@@ -7,7 +7,7 @@
 }
 
 .title {
-    font-size: $fontSizeXLarge;
+    @include FontSizeXLarge;
     font-weight: $fontWeightBold;
 }
 
