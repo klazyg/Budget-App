@@ -1,4 +1,3 @@
-import React from "react";
 import Link from 'next/link';
 import styles from "./Transaction.module.scss";
 import { IconContext } from 'react-icons';
@@ -8,7 +7,13 @@ import { GiClothes } from 'react-icons/gi';
 import moment from 'moment';
 
 interface TransactionsProps {
-  transactions: {what: string; type: string; amount: string; when: string; category: string;}[];
+  transactions: {
+    what: string;
+    type: string;
+    amount: number;
+    when: string;
+    category: string;
+  }[];
 }
 
 const categoryIcons = {
@@ -23,7 +28,7 @@ const categoryIcons = {
 
 const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
   const transactionsToDisplay = transactions.filter(transaction => transaction.type === 'spend')
-  .reverse();
+    .reverse();
   if (!transactionsToDisplay.length) {
     return (
       <div className={styles.position}>

@@ -2,7 +2,8 @@
 @import '/styles/componentStyles.module.scss';
 
 .border {
-    padding: 2rem 0 1rem 0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     border-radius: 20px;
     background-color: $colorBg;
 }
@@ -14,11 +15,19 @@
     justify-content: space-between;
 }
 
+.display {
+    padding-top: 2rem;
+    margin: 0 2rem;
+    color: $colorFontRed;
+    font-weight: $fontWeightMedium;
+    text-align: center;
+}
+
 .date {
+    @include FontSizeXSmall;
     padding: 0.6rem 0 1rem 0;
     margin: 0 1.5rem;
     color: $colorFontGrey;
-    font-size: $fontSizeXSmall;
     font-weight: $fontWeightMedium;
 }
 
@@ -26,14 +35,14 @@
     padding-bottom: 1.3rem;
     margin: 0 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1.5fr 1.5fr;
     cursor: pointer;
-}
 
-.transaction:hover {
-    transition: transform 0.2s;
-    transform: scale(1.1);
-    color: $colorPurple;
+    &:hover {
+        transform: scale(1.1);
+        color: $colorPurple;
+        transition: transform 0.2s;
+    }
 }
 
 .icon_border {
@@ -52,11 +61,11 @@
 }
 
 .dsp {
-    line-height: 1.5rem;
+    line-height: calc($lineHeightDefault * 1.5);
 }
 
 .payment {
-    padding-right: 1rem;
+    padding: 0 1rem;
     font-weight: $fontWeightSemiBold;
     text-transform: capitalize;
     display: flex;
@@ -64,16 +73,17 @@
 }
 
 .category {
+    @include FontSizeXSmall;
+    padding: 0 1rem;
     color: $colorFontGrey;
-    font-size: $fontSizeXSmall;
     font-weight: $fontWeightMedium;
     text-transform: capitalize;
 }
 
 .calendar {
+    @include FontSizeXSmall;
     padding: 0 1rem;
     color: $colorFontGrey;
-    font-size: $fontSizeXSmall;
     font-weight: $fontWeightMedium;
     display: flex;
     justify-content: center;
@@ -82,21 +92,21 @@
 }
 
 .amount {
+    @include FontSizeLarge;
     padding-left: 1rem;
     color: $colorFontRed;
-    font-size: $fontSizeLarge;
     font-weight: $fontWeightSemiBold;
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.amount-income {
-    color: $colorFontGreen;
-}
+    &-income {
+        color: $colorFontGreen;
+    }
 
-.amount-spend {
-    color: $colorFontRed;
+    &-spend {
+        color: $colorFontRed;
+    }
 }
 
 .food {
@@ -167,12 +177,4 @@
 .other:hover {
     color: $colorIconBrown;
     border-color: $colorIconBrown;
-}
-
-.display {
-    padding-top: 2rem;
-    margin: 0 2rem;
-    color: $colorFontRed;
-    font-weight: $fontWeightMedium;
-    text-align: center;
 }
