@@ -18,7 +18,7 @@
 }
 
 .title {
-    font-size: $fontSizeXLarge;
+    @include FontSizeXLarge;
     font-weight: $fontWeightBold;
 }
 
@@ -28,39 +28,50 @@
     cursor: pointer;
 }
 
-.what {
-    width: 50%;
-}
-
-.amount {
-    width: 10%;
-}
-
-.when {
-    width: 20%;
-}
-
-.category {
-    width: 20%;
+.table_heading {
+    @include FontSizeXXXLarge;
+    color: $colorPurple;
 }
 
 .display {
+    @include FontSizeXXLarge;
     padding-top: 2rem;
     text-align: center;
     color: $colorFontRed;
-    font-size: $fontSizeXXLarge;
     font-weight: $fontWeightBold;
 }
 
-.tr {
-    text-transform: capitalize;
-}
-
 .total {
+    @include FontSizeXLarge;
     padding-top: 2rem;
     margin-right: 2rem;
     text-align: right;
     color: $colorPurple;
-    font-size: $fontSizeXLarge;
     font-weight: $fontWeightBold;
+}
+
+.table_row {
+    @include FontSizeLarge;
+    text-transform: capitalize;
+}
+
+.table_row:hover {
+    color: $colorPurple;
+}
+
+.table_cell {
+    padding: 1rem 0;
+}
+
+.table_cell_amount {
+    @extend .table_cell;
+    font-weight: $fontWeightSemiBold;
+}
+
+.what_cell {
+    width: 50%;
+}
+
+.category_cell {
+    width: 20%;
 }

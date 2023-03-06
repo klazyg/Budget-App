@@ -1,79 +1,10 @@
-import React from "react";
-import styles from "../styles/transactions.module.scss";
 import axios from "axios";
+import TransactionsTable from "../components/TransactionsTable/TransactionsTable";
 
-interface Transaction {
-    what: string;
-    type: string;
-    amount: string;
-    when: string;
-    category: string;
-}
-
-interface TransactionsProps {
-    transactions: Transaction[];
-}
-
-const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
-    const totalAmount = transactions.reduce((total, transaction) => total + Number(transaction.amount), 0);
-    if (!transactions.length) {
-        return (
-            <div className={styles.position}>
-                <div className={styles.border}>
-                    <div className={styles.text}>
-                        <div className={styles.title}>
-                            All Transactions
-                        </div>
-                    </div>
-                    <table className={styles.table}>
-                        <thead>
-                            <tr>
-                                <th className={styles.what}>What</th>
-                                <th className={styles.amount}>Amount</th>
-                                <th className={styles.when}>When</th>
-                                <th className={styles.category}>Category</th>
-                            </tr>
-                        </thead>
-                    </table>
-                    <div className={styles.display}>
-                        <span>No transactions</span>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+const Transactions = ({ transactions }) => {
     return (
-        <div className={styles.position}>
-            <div className={styles.border}>
-                <div className={styles.text}>
-                    <div className={styles.title}>
-                        All Transactions
-                    </div>
-                </div>
-                <table className={styles.table}>
-                    <thead className={styles.thead}>
-                        <tr className={styles.tr}>
-                            <th className={styles.what}>What</th>
-                            <th className={styles.amount}>Amount</th>
-                            <th className={styles.when}>When</th>
-                            <th className={styles.category}>Category</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {transactions.map((transaction, index) => (
-                            <tr key={index} className={styles.tr}>
-                                <td>{transaction.what}</td>
-                                <td>${transaction.amount}</td>
-                                <td>{transaction.when}</td>
-                                <td>{transaction.category}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-                <div className={styles.total}>Total Amount: -${totalAmount}</div>
-            </div>
-        </div>
-    );
+        <TransactionsTable transactions={transactions} title="All Transactions" />
+    )
 };
 
 export async function getServerSideProps() {
