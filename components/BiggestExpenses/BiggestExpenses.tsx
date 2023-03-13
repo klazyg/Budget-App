@@ -40,7 +40,7 @@ const BiggestExpenses: React.FC<Props> = ({ sortedTransactions }) => {
     let biggestExpenses = sortedTransactions.slice(0, 6).map((transaction, index) => {
       let Icon = categoryIcons[transaction.category];
       return (
-        <div className={styles.item}>
+        <div className={styles.item} key={index}>
           <div className={`${styles.box} ${styles.categoryContainer} ${styles[transaction.category]}`} key={index}>
             <Icon className={styles.icon} />
             <span className={styles.category}> {transaction.category}</span>
