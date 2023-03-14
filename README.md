@@ -28,7 +28,7 @@ gh repo clone klazyg/Budget-App
 
 To use the application as a user, simply:
 
-1. Open the Budget App in your web browser () or follow the instructions in "Getting Started".
+1. Open the Budget app by following the instructions in the "Getting Started" section.
 2. Fill out the form with your transaction details. Required information includes:
     * transaction name (e.g. "Grocery shopping", "Salary", "Savings" or other),
     * transaction type (income, spend, or savings),
