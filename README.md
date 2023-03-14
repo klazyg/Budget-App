@@ -5,19 +5,25 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 My Budget App allows users to add different types of transactions with a simple form. Thanks to the clear layout, users can easily monitor their expenses, savings and income, while the graph and summaries help to quickly understand their finances.
 
 
-## :gear: Getting Started
+## :gear: Running
 
-First, run the development server:
+After cloning the project repository, run the following command in the terminal to install all dependencies:
+
+```bash
+npm install
+```
+
+To run the development server, execute the following command:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once the server is running, the project will be available at http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can also start editing the page by modifying the pages/index.tsx file. The page will automatically update as you edit the file.
 
-Alternatively, you can use GitHub CLI, which allows you to clone, fork, and manage the repository directly from the command line. To clone the repository using GitHub CLI, type the following command in your terminal:
+Alternatively, you can use the GitHub CLI interface to clone the repository with the following command:
 
 ```bash
 gh repo clone klazyg/Budget-App
